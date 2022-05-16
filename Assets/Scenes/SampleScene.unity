@@ -146,7 +146,7 @@ GameObject:
   - component: {fileID: 311632725}
   - component: {fileID: 311632724}
   - component: {fileID: 311632723}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Map
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -554,6 +554,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1350673616}
   - component: {fileID: 1350673615}
+  - component: {fileID: 1350673617}
+  - component: {fileID: 1350673618}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -596,6 +598,45 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1350673617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1350673612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e9d268ff7f7aae4b89c2c98b1f68c8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dragSelect: 0
+  selectionMesh: {fileID: 0}
+  _player: {fileID: 1350673618}
+  p1: {x: 0, y: 0, z: 0}
+--- !u!114 &1350673618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1350673612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54c6a35b8f8463b48a88719634829f3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementMask:
+    serializedVersion: 2
+    m_Bits: 8
+  interactionMask:
+    serializedVersion: 2
+    m_Bits: 64
+  UIMask:
+    serializedVersion: 2
+    m_Bits: 32
+  controlledFaction: {fileID: 1784898294}
+  dragSelect: {fileID: 1350673617}
 --- !u!1 &1574036752
 GameObject:
   m_ObjectHideFlags: 0

@@ -21,6 +21,17 @@ public class Unit : MapObject
         activeMission.PerformMission();
     }
 
+    public override void OnLeftClick(Player player)
+    {
+        if (player.controlledFaction == faction)
+        {
+            if (!faction.selectedUnit.Contains(this))
+            {
+                faction.selectedUnit.Add(this);
+            }
+        }
+    }
+
     public virtual void TakeDamage(Warrior attacker, int damageAmount)
     {
         _health -= damageAmount;
@@ -29,6 +40,7 @@ public class Unit : MapObject
             Death();
         }
     }
+    
 
     public virtual void Death()
     {

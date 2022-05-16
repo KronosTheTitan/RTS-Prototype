@@ -4,7 +4,12 @@ using UnityEngine;
 
 public class MapObject : MonoBehaviour
 {
-    public virtual void OnClick()
+    public virtual void OnLeftClick(Player player)
+    {
+        
+    }
+
+    public virtual void OnRightClick(Player player)
     {
         
     }
